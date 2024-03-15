@@ -21,6 +21,7 @@ export function SidebarBrand() {
           h="26px"
           w="175px"
           my="32px"
+          mr={8}
           color={logoColor}
         />}
         <IconButton
@@ -29,8 +30,8 @@ export function SidebarBrand() {
           onClick={() => {
             setToggleSidebar(!toggleSidebar);
           }}
-          marginLeft={2}
           zIndex="1"
+          _hover="none"
         />
       </Flex>
       <HSeparator mb="20px" />
