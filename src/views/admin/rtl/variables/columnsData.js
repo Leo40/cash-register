@@ -34,4 +34,7 @@ export const columnsDataComplex = [
     accessor: "progress",
   },
 ];
+<<<<<<< HEAD
 
+=======
+>>>>>>> 7ded5d4f888d04e34236c661f73d4ee67dd37f1f
