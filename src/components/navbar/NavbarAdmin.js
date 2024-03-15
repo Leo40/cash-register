@@ -1,12 +1,14 @@
 // Chakra Imports
 import { Box, Breadcrumb, BreadcrumbItem, BreadcrumbLink, Flex, Link, Text, useColorModeValue } from '@chakra-ui/react';
 import PropTypes from 'prop-types';
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import AdminNavbarLinks from 'components/navbar/NavbarLinksAdmin';
+import { SidebarContext } from "contexts/SidebarContext";
 
 export default function AdminNavbar(props) {
 	const [ scrolled, setScrolled ] = useState(false);
-
+	const { toggleSidebar } = useContext(SidebarContext);
+	const widthOffset = toggleSidebar ? "135px" : "350px";
 	useEffect(() => {
 		window.addEventListener('scroll', changeNavbar);
 
@@ -50,8 +52,8 @@ export default function AdminNavbar(props) {
 			borderRadius='16px'
 			borderWidth='1.5px'
 			borderStyle='solid'
-			transitionDelay='0s, 0s, 0s, 0s'
-			transitionDuration=' 0.25s, 0.25s, 0.25s, 0s'
+			// transitionDelay='0s, 0s, 0s, 0s'
+			// transitionDuration=' 0.25s, 0.25s, 0.25s, 0s'
 			transition-property='box-shadow, background-color, filter, border'
 			transitionTimingFunction='linear, linear, linear, linear'
 			alignItems={{ xl: 'center' }}
@@ -76,7 +78,7 @@ export default function AdminNavbar(props) {
 				base: 'calc(100vw - 6%)',
 				md: 'calc(100vw - 8%)',
 				lg: 'calc(100vw - 6%)',
-				xl: 'calc(100vw - 350px)',
+				xl: `calc(100vw - ${widthOffset})`,
 				'2xl': 'calc(100vw - 365px)'
 			}}>
 			<Flex

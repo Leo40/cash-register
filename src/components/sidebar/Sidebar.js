@@ -34,18 +34,22 @@ function Sidebar(props) {
 
   // SIDEBAR
   return (
-    <Box display={{ sm: "none", xl: "block" }} w="100%" position="fixed" minH="100%">
+    <Box
+      display={{ sm: "none", xl: "block" }}
+      w={!toggleSidebar ? "300px" : "70px"}
+      position="fixed"
+      minH="100%"
+      bg="blue"
+    >
       <Box
         bg={sidebarBg}
         transition={variantChange}
-        w={!toggleSidebar ? "300px" : "70px"}
         h="100vh"
         m={sidebarMargins}
         minH="100%"
         overflowX="hidden"
         boxShadow={shadow}
       >
-
         <Scrollbars
           autoHide
           renderTrackVertical={renderTrack}
