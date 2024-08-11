@@ -1,4 +1,16 @@
-import { Flex, Table, Tbody, Td, Text, Th, Thead, Tr, useColorModeValue } from "@chakra-ui/react";
+import {
+  Flex,
+  Table,
+  Tbody,
+  Td,
+  Text,
+  Th,
+  Thead,
+  Tr,
+  useColorModeValue,
+  Button,
+  IconButton,
+} from "@chakra-ui/react";
 import React, { useMemo } from "react";
 import { useGlobalFilter, usePagination, useSortBy, useTable } from "react-table";
 
@@ -7,7 +19,7 @@ import Card from "components/card/Card";
 import Menu from "components/menu/MainMenu";
 import { DeleteIcon, EditIcon } from "@chakra-ui/icons";
 export default function Products(props) {
-  const { columnsData, tableData } = props;
+  const { columnsData, tableData, handleDeleteItem } = props;
 
   const columns = useMemo(() => columnsData, [columnsData]);
   const data = useMemo(() => tableData, [tableData]);
@@ -100,8 +112,12 @@ export default function Products(props) {
                   } else if (cell.column.Header === "ACTION") {
                     data = (
                       <Flex gap="2">
-                        <EditIcon color={textColor} w={5} h={5} />
-                        <DeleteIcon color={textColor} w={5} h={5} />
+                        <IconButton padding="0px" >
+                          <EditIcon color={textColor} w={5} h={5} margin="0px"/>
+                        </IconButton>
+                        <IconButton>
+                          <DeleteIcon color={textColor} w={5} h={5} onClick={handleDeleteItem} />
+                        </IconButton>
                       </Flex>
                     );
                   }

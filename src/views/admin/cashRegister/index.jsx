@@ -8,6 +8,10 @@ import { useState } from "react";
 export default function CashRegister() {
   const [scanValue, setScanValue] = useState("");
   const handleItemChange = () => {}
+  const handleDeleteItem = () => {
+    console.log('Item deleted');
+  }
+  // const handleItemChange = () => {}
   return (
     <Box pt={{ base: "130px", md: "80px", xl: "80px" }} color="secondaryGray.900">
       {/* Main Fields */}
@@ -46,7 +50,11 @@ export default function CashRegister() {
               </GridItem>
             </Grid>
           </Card>
-          <Products columnsData={productsDataColumns} tableData={tableDataColumns} />
+          <Products
+            columnsData={productsDataColumns}
+            tableData={tableDataColumns}
+            handleDeleteItem={handleDeleteItem}
+          />
         </GridItem>
         <GridItem rowSpan={2} colSpan={1}>
           <VStack
