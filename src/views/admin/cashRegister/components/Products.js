@@ -34,7 +34,7 @@ export default function Products(props) {
         <Text color={textColor} fontSize="22px" fontWeight="700" lineHeight="100%">
           Products
         </Text>
-        <Menu />
+        {/* <Menu /> */}
       </Flex>
       <Table {...getTableProps()} variant="simple" color="gray.500" mb="24px">
         <Thead>
