@@ -1,10 +1,13 @@
-import { Box, Button, Divider, Grid, GridItem, StackDivider, Text, VStack } from "@chakra-ui/react";
+import { Box, Button, Divider, Grid, GridItem, Input, StackDivider, Text, VStack } from "@chakra-ui/react";
 import Products from "./components/Products";
 import { productsDataColumns } from "views/admin/dataTables/variables/columnsData";
 import tableDataColumns from "views/admin/dataTables/variables/tableDataColumns.json";
 import Card from "components/card/Card";
+import { useState } from "react";
 
 export default function CashRegister() {
+  const [scanValue, setScanValue] = useState("");
+  const handleItemChange = () => {}
   return (
     <Box pt={{ base: "130px", md: "80px", xl: "80px" }} color="secondaryGray.900">
       {/* Main Fields */}
@@ -20,6 +23,29 @@ export default function CashRegister() {
         gap={{ base: "20px", xl: "20px" }}
       >
         <GridItem rowSpan={1} colSpan={1}>
+          <Card height="auto" mb={5}>
+            <Grid templateColumns="2fr 1fr" gap={6}>
+              <GridItem rowSpan={1} colSpan={1}>
+                <Text textAlign="left">Item Name</Text>
+                <Input
+                  value={scanValue}
+                  onChange={handleItemChange}
+                  placeholder="Scan baracode now"
+                  size="sm"
+                />
+              </GridItem>
+              <GridItem rowSpan={1} colSpan={1}>
+                <Text textAlign="left">Quantity</Text>
+                <Input
+                  value={scanValue}
+                  onChange={handleItemChange}
+                  placeholder="Quantity"
+                  size="sm"
+                  w="50%"
+                />
+              </GridItem>
+            </Grid>
+          </Card>
           <Products columnsData={productsDataColumns} tableData={tableDataColumns} />
         </GridItem>
         <GridItem rowSpan={2} colSpan={1}>
@@ -46,10 +72,13 @@ export default function CashRegister() {
                 <Text>3x Product 3</Text>
                 <Text textAlign="right">$17.99</Text>
 
-                <Text>7x Product 4</Text>
+                <Text>7x Product 5</Text>
                 <Text textAlign="right">$99.99</Text>
 
-                <Text>7x Product 4</Text>
+                <Text>7x Product 6</Text>
+                <Text textAlign="right">$99.99</Text>
+
+                <Text>2x Product 7</Text>
                 <Text textAlign="right">$99.99</Text>
               </Grid>
             </Box>
@@ -116,7 +145,7 @@ export default function CashRegister() {
               <Card height="100%">Sports and Outdoors</Card>
             </GridItem>
             <GridItem rowSpan={1} colSpan={1}>
-              <Card height="100%">Groceries</Card>
+              <Card height="100%">Office Supplies</Card>
             </GridItem>
           </Grid>
         </GridItem>

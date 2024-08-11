@@ -29,7 +29,7 @@ export default function Products(props) {
   const textColor = useColorModeValue("secondaryGray.900", "white");
   const borderColor = useColorModeValue("gray.200", "whiteAlpha.100");
   return (
-    <Card direction="column" w="100%" px="0px" py="auto" overflowX={{ sm: "scroll", lg: "hidden" }}>
+    <Card direction="column" w="100%" px="0px" pt="auto" pb="0px" overflowX={{ sm: "scroll", lg: "hidden" }}>
       <Flex px="25px" justify="space-between" mb="20px" align="center">
         <Text color={textColor} fontSize="22px" fontWeight="700" lineHeight="100%">
           Products
