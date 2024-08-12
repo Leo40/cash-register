@@ -7,7 +7,9 @@ import { useState } from "react";
 
 export default function CashRegister() {
   const [scanValue, setScanValue] = useState("");
-  const handleItemChange = () => {}
+  const [quantity, setQuantity] = useState("");
+  const handleScanChange = (e) => {setScanValue(e.target.value)}
+  const handleQuantityChange = (e) => {setQuantity(e.target.value);}
   const handleDeleteItem = () => {
     console.log('Item deleted');
   }
@@ -33,7 +35,7 @@ export default function CashRegister() {
                 <Text textAlign="left">Item Name</Text>
                 <Input
                   value={scanValue}
-                  onChange={handleItemChange}
+                  onChange={handleScanChange}
                   placeholder="Scan baracode now"
                   size="sm"
                 />
@@ -41,8 +43,8 @@ export default function CashRegister() {
               <GridItem rowSpan={1} colSpan={1}>
                 <Text textAlign="left">Quantity</Text>
                 <Input
-                  value={scanValue}
-                  onChange={handleItemChange}
+                  value={quantity}
+                  onChange={handleQuantityChange}
                   placeholder="Quantity"
                   size="sm"
                   w="50%"
