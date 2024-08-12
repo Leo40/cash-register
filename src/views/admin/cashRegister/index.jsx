@@ -1,18 +1,36 @@
-import { Box, Button, Divider, Grid, GridItem, Input, StackDivider, Text, VStack } from "@chakra-ui/react";
+import {
+  Box,
+  Button,
+  Divider,
+  Grid,
+  GridItem,
+  Input,
+  StackDivider,
+  Text,
+  VStack,
+} from "@chakra-ui/react";
 import Products from "./components/Products";
 import { productsDataColumns } from "views/admin/dataTables/variables/columnsData";
-import tableDataColumns from "views/admin/dataTables/variables/tableDataColumns.json";
+import tableDataColumnsRaw from "views/admin/dataTables/variables/tableDataColumns.json";
 import Card from "components/card/Card";
 import { useState } from "react";
 
 export default function CashRegister() {
+  const [tableDataColumns, setTableDataColumns] = useState(tableDataColumnsRaw);
   const [scanValue, setScanValue] = useState("");
   const [quantity, setQuantity] = useState("");
-  const handleScanChange = (e) => {setScanValue(e.target.value)}
-  const handleQuantityChange = (e) => {setQuantity(e.target.value);}
-  const handleDeleteItem = () => {
-    console.log('Item deleted');
-  }
+  const handleScanChange = (e) => {
+    setScanValue(e.target.value);
+  };
+  const handleQuantityChange = (e) => {
+    setQuantity(e.target.value);
+  };
+  const handleDeleteItem = (cell) => {
+    const updatedTableDataColumns = tableDataColumns.filter(
+      (column) => column.id !== cell.row.values.id
+    );
+    setTableDataColumns(updatedTableDataColumns);
+  };
   // const handleItemChange = () => {}
   return (
     <Box pt={{ base: "130px", md: "80px", xl: "80px" }} color="secondaryGray.900">

@@ -112,12 +112,24 @@ export default function Products(props) {
                   } else if (cell.column.Header === "ACTION") {
                     data = (
                       <Flex gap="2">
-                        <IconButton padding="0px" >
-                          <EditIcon color={textColor} w={5} h={5} margin="0px"/>
-                        </IconButton>
-                        <IconButton>
-                          <DeleteIcon color={textColor} w={5} h={5} onClick={handleDeleteItem} />
-                        </IconButton>
+                        <IconButton
+                          icon={<EditIcon w={5} h={5} />}
+                          aria-label="Edit"
+                          variant="ghost"
+                          size="sm"
+                          color={textColor}
+                          _hover={{ color: "blue.500", bg: "transparent", cursor: "pointer" }}
+                          // onClick={handleEditItem}
+                        />
+                        <IconButton
+                          icon={<DeleteIcon w={5} h={5} />}
+                          aria-label="Delete"
+                          variant="ghost"
+                          size="sm"
+                          color={textColor}
+                          _hover={{ color: "red.500", bg: "transparent", cursor: "pointer" }}
+                          onClick={() => handleDeleteItem(cell)}
+                        />
                       </Flex>
                     );
                   }
