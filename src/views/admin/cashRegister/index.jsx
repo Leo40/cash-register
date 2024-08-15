@@ -15,6 +15,18 @@ import tableDataColumnsRaw from "views/admin/dataTables/variables/tableDataColum
 import Card from "components/card/Card";
 import { useState } from "react";
 
+const CATEGORIES = [
+  "Electronics",
+  "Homeware",
+  "Health and Weallness",
+  "Sports and Outdoors",
+  "Groceries",
+  "Apparel",
+  "Toiletries",
+  "Gadgets",
+  "Beauty",
+  "Office Supplies ",
+];
 export default function CashRegister() {
   const [tableDataColumns, setTableDataColumns] = useState(tableDataColumnsRaw);
   const [scanValue, setScanValue] = useState("");
@@ -32,6 +44,9 @@ export default function CashRegister() {
     setTableDataColumns(updatedTableDataColumns);
   };
   // const handleItemChange = () => {}
+  const handleCategory = (category) => {
+    
+  }
   return (
     <Box pt={{ base: "130px", md: "80px", xl: "80px" }} color="secondaryGray.900">
       {/* Main Fields */}
@@ -145,36 +160,11 @@ export default function CashRegister() {
             }}
             gap={{ base: "20px", xl: "20px" }}
           >
-            <GridItem rowSpan={1} colSpan={1}>
-              <Card height="100%">Electronics</Card>
-            </GridItem>
-            <GridItem rowSpan={1} colSpan={1}>
-              <Card height="100%">Homeware</Card>
-            </GridItem>
-            <GridItem rowSpan={1} colSpan={1}>
-              <Card height="100%">Health and Weallness</Card>
-            </GridItem>
-            <GridItem rowSpan={1} colSpan={1}>
-              <Card height="100%">Sports and Outdoors</Card>
-            </GridItem>
-            <GridItem rowSpan={1} colSpan={1}>
-              <Card height="100%">Groceries</Card>
-            </GridItem>
-            <GridItem rowSpan={1} colSpan={1}>
-              <Card height="100%">Electronics</Card>
-            </GridItem>
-            <GridItem rowSpan={1} colSpan={1}>
-              <Card height="100%">Homeware</Card>
-            </GridItem>
-            <GridItem rowSpan={1} colSpan={1}>
-              <Card height="100%">Health and Weallness</Card>
-            </GridItem>
-            <GridItem rowSpan={1} colSpan={1}>
-              <Card height="100%">Sports and Outdoors</Card>
-            </GridItem>
-            <GridItem rowSpan={1} colSpan={1}>
-              <Card height="100%">Office Supplies</Card>
-            </GridItem>
+            {CATEGORIES.map(category => (
+              <GridItem rowSpan={1} colSpan={1} onClick={() => handleCategory(category)} cursor="pointer">
+                <Card height="100%">{category}</Card>
+              </GridItem>
+            ))}
           </Grid>
         </GridItem>
       </Grid>
