@@ -56,6 +56,13 @@ export default function CashRegister() {
 
   const getVAT = () => getProductsTotal() * 0.15;
 
+  const getGrandTotal = () => {
+    const grandTotal = getProductsTotal() + getVAT();
+    return `$${grandTotal.toLocaleString()}`;
+  };
+
+  const grandTotal = getGrandTotal();
+
   return (
     <Box pt={{ base: "130px", md: "80px", xl: "80px" }} color="secondaryGray.900">
       {/* Main Fields */}
@@ -138,11 +145,11 @@ export default function CashRegister() {
                 <Text fontSize="xl" fontWeight="bold">
                   Total:
                 </Text>
-                <Text>{`$${(getProductsTotal() + getVAT()).toLocaleString()}`}</Text>
+                <Text>{grandTotal}</Text>
               </Grid>
             </Box>
             <Button colorScheme="blue" w="full">
-              Pay $206.95
+              Pay {grandTotal}
             </Button>
           </VStack>
         </GridItem>
