@@ -79,7 +79,7 @@ export default function CashRegister() {
       >
         <GridItem rowSpan={1} colSpan={1}>
           <Card height="auto" mb={5}>
-            <Grid templateColumns="2fr 1fr" gap={6}>
+            <Grid templateColumns="2fr 1fr 1fr" gap={6}>
               <GridItem rowSpan={1} colSpan={1}>
                 <Text textAlign="left">Item Name</Text>
                 <Input
@@ -98,6 +98,11 @@ export default function CashRegister() {
                   size="sm"
                   w="50%"
                 />
+              </GridItem>
+              <GridItem rowSpan={1} colSpan={1}>
+                <Button isLoading={false} loadingText="Submitting" colorScheme="teal" variant="outline">
+                  Submit
+                </Button>
               </GridItem>
             </Grid>
           </Card>
