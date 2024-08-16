@@ -118,7 +118,7 @@ export default function CashRegister() {
                 {tableDataColumns.map((product) => (
                   <>
                     <Text>{`${product.quantity}x ${product.name}`} </Text>
-                    <Text textAlign="right">{product.price}</Text>
+                    <Text textAlign="right">{`$${product.price}`}</Text>
                   </>
                 ))}
               </Grid>
@@ -126,11 +126,11 @@ export default function CashRegister() {
             <Box>
               <Grid templateColumns="1fr auto" gap={6}>
                 <Text>Item subtotal:</Text>
-                <Text textAlign="right">{getProductsTotal()}</Text>
+                <Text textAlign="right">{`$${getProductsTotal().toLocaleString()}`}</Text>
                 <Text>Discount:</Text>
                 <Text textAlign="right">$0</Text>
                 <Text>VAT (15%):</Text>
-                <Text textAlign="right">${getVAT()}</Text>
+                <Text textAlign="right">{`$${getVAT()}`}</Text>
               </Grid>
             </Box>
             <Box>
@@ -138,7 +138,7 @@ export default function CashRegister() {
                 <Text fontSize="xl" fontWeight="bold">
                   Total:
                 </Text>
-                <Text>{getProductsTotal() + getVAT()}</Text>
+                <Text>{`$${(getProductsTotal() + getVAT()).toLocaleString()}`}</Text>
               </Grid>
             </Box>
             <Button colorScheme="blue" w="full">
