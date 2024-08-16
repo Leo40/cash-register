@@ -1,26 +1,30 @@
 [
   {
     "id": 1,
-    "name": "Marketplace",
+    "name": "iPhone 15 Pro Max",
     "category": "Electronics",
+    "quantity": 1,
     "last update": "12.Jan.2021"
   },
   {
     "id": 2,
-    "name": "Venus DB PRO",
+    "name": "Staples 8.5 x 11 Copy Paper",
     "category": "Office Supplies",
+    "quantity": 3,
     "last update": "21.Feb.2021"
   },
   {
     "id": 3,
-    "name": "Venus DS",
+    "name": "Venus DB PRO",
     "category": "Toys and Games",
+    "quantity": 1,
     "last update": "13.Mar.2021"
   },
   {
     "id": 4,
-    "name": "Venus 3D Asset",
+    "name": "IKEA LACK Coffee Table",
     "category": "Furniture",
+    "quantity": 1,
     "last update": "24.Jan.2021"
   }
 ]

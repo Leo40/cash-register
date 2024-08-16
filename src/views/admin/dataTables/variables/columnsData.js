@@ -69,6 +69,10 @@ export const productsDataColumns = [
     accessor: "category",
   },
   {
+    Header: "QTY",
+    accessor: "quantity",
+  },
+  {
     Header: "LAST UPDATE",
     accessor: "last update",
   },

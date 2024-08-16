@@ -103,6 +103,14 @@ export default function Products(props) {
                         </Text>
                       </Flex>
                     );
+                  } else if (cell.column.Header === "QTY") {
+                    data = (
+                      <Flex align="center">
+                        <Text me="10px" color={textColor} fontSize="sm" fontWeight="500">
+                          {cell.value}
+                        </Text>
+                      </Flex>
+                    );
                   } else if (cell.column.Header === "LAST UPDATE") {
                     data = (
                       <Text color={textColor} fontSize="sm" fontWeight="500">
