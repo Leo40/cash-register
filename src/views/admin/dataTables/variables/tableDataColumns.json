@@ -4,6 +4,7 @@
     "name": "iPhone 15 Pro Max",
     "category": "Electronics",
     "quantity": 1,
+    "price": "$1,549",
     "last update": "12.Jan.2021"
   },
   {
@@ -11,6 +12,7 @@
     "name": "Staples 8.5 x 11 Copy Paper",
     "category": "Office Supplies",
     "quantity": 3,
+    "price": "$299",
     "last update": "21.Feb.2021"
   },
   {
@@ -18,6 +20,7 @@
     "name": "Venus DB PRO",
     "category": "Toys and Games",
     "quantity": 1,
+    "price": "$579",
     "last update": "13.Mar.2021"
   },
   {
@@ -25,6 +28,7 @@
     "name": "IKEA LACK Coffee Table",
     "category": "Furniture",
     "quantity": 1,
+    "price": "$399",
     "last update": "24.Jan.2021"
   }
 ]
