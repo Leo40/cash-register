@@ -65,7 +65,6 @@ export default function CashRegister() {
 
   return (
     <Box pt={{ base: "130px", md: "80px", xl: "80px" }} color="secondaryGray.900">
-      {/* Main Fields */}
       <Grid
         templateColumns={{
           base: "1fr",
@@ -79,7 +78,7 @@ export default function CashRegister() {
       >
         <GridItem rowSpan={1} colSpan={1}>
           <Card height="auto" mb={5}>
-            <Grid templateColumns="2fr 1fr 1fr" gap={6}>
+            <Grid templateColumns="3fr 1fr 1fr" gap={6}>
               <GridItem rowSpan={1} colSpan={1}>
                 <Text textAlign="left">Item Name</Text>
                 <Input
@@ -96,11 +95,16 @@ export default function CashRegister() {
                   onChange={handleQuantityChange}
                   placeholder="Quantity"
                   size="sm"
-                  w="50%"
+                  w="100%"
                 />
               </GridItem>
-              <GridItem rowSpan={1} colSpan={1}>
-                <Button isLoading={false} loadingText="Submitting" colorScheme="teal" variant="outline">
+              <GridItem rowSpan={1} colSpan={1} marginTop="auto" alignItems="flex-end">
+                <Button
+                  isLoading={false}
+                  loadingText="Submitting"
+                  colorScheme="teal"
+                  variant="solid"
+                >
                   Submit
                 </Button>
               </GridItem>
