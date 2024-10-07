@@ -181,7 +181,17 @@ export default function CashRegister() {
                 onClick={() => handleCategory(category)}
                 cursor="pointer"
               >
-                <Card height="100%">{category}</Card>
+                <Card
+                  height="100%"
+                  sx={{
+                    backgroundColor: "white",
+                    "&:hover": {
+                      backgroundColor: "gray.200",
+                    },
+                  }}
+                >
+                  {category}
+                </Card>
               </GridItem>
             ))}
           </Grid>
