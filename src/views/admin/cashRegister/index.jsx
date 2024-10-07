@@ -182,8 +182,11 @@ export default function CashRegister() {
                 cursor="pointer"
               >
                 <Card
-                  height="100%"
                   sx={{
+                    height: "100%",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
                     backgroundColor: "white",
                     "&:hover": {
                       backgroundColor: "gray.200",
