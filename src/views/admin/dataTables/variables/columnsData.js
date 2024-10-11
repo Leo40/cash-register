@@ -77,10 +77,6 @@ export const productsDataColumns = [
     accessor: "price",
   },
   {
-    Header: "LAST UPDATE",
-    accessor: "last update",
-  },
-  {
     Header: "ACTION",
     accessor: "action",
   },

@@ -84,7 +84,7 @@ export default function CashRegister() {
                 <Input
                   value={scanValue}
                   onChange={handleScanChange}
-                  placeholder="Search or scan baracode now"
+                  placeholder="Search item or scan baracode now..."
                   size="sm"
                 />
               </GridItem>
