@@ -98,7 +98,7 @@ export default function CashRegister() {
                   w="100%"
                 />
               </GridItem>
-              <GridItem rowSpan={1} colSpan={1} marginTop="auto" alignItems="flex-end">
+              <GridItem rowSpan={1} colSpan={1} marginTop="auto" alignItems="flex-end" marginLeft="auto">
                 <Button
                   isLoading={false}
                   loadingText="Submitting"
