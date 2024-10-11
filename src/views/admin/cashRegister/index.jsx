@@ -84,7 +84,7 @@ export default function CashRegister() {
                 <Input
                   value={scanValue}
                   onChange={handleScanChange}
-                  placeholder="Scan baracode now"
+                  placeholder="Search or scan baracode now"
                   size="sm"
                 />
               </GridItem>
@@ -98,7 +98,13 @@ export default function CashRegister() {
                   w="100%"
                 />
               </GridItem>
-              <GridItem rowSpan={1} colSpan={1} marginTop="auto" alignItems="flex-end" marginLeft="auto">
+              <GridItem
+                rowSpan={1}
+                colSpan={1}
+                marginTop="auto"
+                alignItems="flex-end"
+                marginLeft="auto"
+              >
                 <Button
                   isLoading={false}
                   loadingText="Submitting"
