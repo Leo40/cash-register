@@ -133,7 +133,7 @@ export default function Products(props) {
                           icon={<EditIcon w={5} h={5} />}
                           aria-label="Edit"
                           variant="ghost"
-                          size="sm"
+                          size="md"
                           color={textColor}
                           _hover={{ color: "blue.500", bg: "transparent", cursor: "pointer" }}
                           // onClick={handleEditItem}
@@ -142,7 +142,7 @@ export default function Products(props) {
                           icon={<DeleteIcon w={5} h={5} />}
                           aria-label="Delete"
                           variant="ghost"
-                          size="sm"
+                          size="md"
                           color={textColor}
                           _hover={{ color: "red.500", bg: "transparent", cursor: "pointer" }}
                           onClick={() => handleDeleteItem(cell)}
