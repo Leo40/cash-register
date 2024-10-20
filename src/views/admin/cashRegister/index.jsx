@@ -129,7 +129,7 @@ export default function CashRegister() {
             w="full"
             p={5}
             borderRadius="20px"
-            bg="white"
+            bg="gray.1000"
             divider={<StackDivider borderColor="gray.200" />}
           >
             <Text fontSize="2xl" fontWeight="semibold">
