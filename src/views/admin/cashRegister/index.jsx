@@ -127,6 +127,7 @@ export default function CashRegister() {
             spacing={4}
             align="stretch"
             w="full"
+            h="full"
             p={5}
             borderRadius="20px"
             bg="gray.1000"
